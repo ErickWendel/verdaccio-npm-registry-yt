@@ -1,0 +1,58 @@
+
+- Conheci na Alemanha na palestra que fiz
+    trivago’s Ayush Sharma https://youtu.be/A5CWxJC9xzc
+
+- Problema do NPM - pago, repositorio central, medo de eles virarem a casaca e ficar preso 
+- Criando um pacote NPM baseado na live de Request 
+    - RickAndMortyAPI 
+- Introdução ao verdaccio
+- Verdaccio local 
+- Verdaccio Docker 
+- Verdaccio Heroku
+    https://devcenter.heroku.com/articles/container-registry-and-runtime
+Verdaccio is run by volunteers; nobody is working full-time on it. If you find this project to be useful and would like to support its development, consider making a donation - your logo might end up in this readme. 😉
+
+
+
+demo
+    git clone https://github.com/ErickWendel/mastering-promises-yt.git
+    mv -f mastering-promises-yt/recorded abacate
+    rm -rf mastering-promises-yt
+
+    node --v // 16
+    cd abacate && npm ci --silent
+
+    npm t 
+    npm outdated 
+    npm update
+    npm test && npm run cov 
+
+    change package.json - name 
+    mv -f src/index.js examples/index.js 
+        change require 
+    change package.json - start
+
+    request.js -> add defaults 
+
+    npm i -g verdaccio
+    go to http://localhost:4873/
+    npm adduser --registry http://localhost:4873/
+    ErickWendel
+    123
+    npm publish --registry http://localhost:4873/
+
+    export NPM_CONFIG_REGISTRY=http://localhost:4873
+    mkdir app 
+        app npm init -y 
+    npm i @ErickWendel/abacate
+    app/index.js all 
+        https://rickandmortyapi.com/documentation/
+
+    npm rm -g verdaccio
+
+
+    docker run -it --rm --name verdaccio -p 4873:4873 verdaccio/verdaccio:nightly-master
+    npm rm @ErickWendel/abacate
+    npm i @ErickWendel/abacate
+    
+    https://github.com/verdaccio/verdaccio/issues/1305
